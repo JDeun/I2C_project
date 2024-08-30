@@ -1,0 +1,148 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 제목 스타일 */
+h1, h2 {
+    color: #333;
+}
+
+/* 각 단계 컨테이너 스타일 */
+.step {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 드래그 앤 드롭 영역 스타일 */
+.dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 드래그 오버 시 스타일 */
+.dropzone.dragover {
+    background-color: #f0f0f0;
+}
+
+/* 입력 필드, 선택 박스, 버튼, 텍스트 영역 공통 스타일 */
+input, select, button, textarea {
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 모바일 옵션 숨김 (기본값) */
+#mobileOptions {
+    display: none;
+}
+
+/* 이미지 프리뷰 컨테이너 스타일 */
+#imagePreviewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* 이미지 프리뷰 아이템 스타일 */
+.imagePreview {
+    width: 100px;  /* 이미지 너비 축소 */
+    height: 100px; /* 이미지 높이 축소 */
+    position: relative;
+    overflow: hidden; /* 이미지가 컨테이너를 벗어나지 않도록 함 */
+}
+
+/* 이미지 프리뷰 내부 이미지 스타일 */
+.imagePreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지 비율 유지하며 컨테이너에 맞춤 */
+}
+
+/* 이미지 제거 버튼 스타일 */
+.removeImage {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* 캐러셀 스타일 */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 캐러셀 아이템 스타일 */
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    scroll-snap-align: start;
+}
+
+/* 캐러셀 내부 이미지 스타일 */
+.carousel-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* 스켈레톤 로딩 스타일 */
+.skeleton {
+    background-color: #f0f0f0;
+    height: 200px;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+/* 라디오 버튼 그룹 스타일 */
+.radio-group {
+    margin-top: 10px;
+}
+
+/* 라디오 버튼 레이블 스타일 */
+.radio-group label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* 스켈레톤 로딩 애니메이션 */
+@keyframes pulse {
+    0% {
+        background-color: #f0f0f0;
+    }
+    50% {
+        background-color: #e0e0e0;
+    }
+    100% {
+        background-color: #f0f0f0;
+    }
+}
+
+/* 모바일 환경을 위한 반응형 스타일 */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+}

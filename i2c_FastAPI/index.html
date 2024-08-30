@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 I2C - 글담(가제)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>프로젝트 I2C - 글담(가제)</h1>
+    
+    <div class="step" id="step1">
+        <h2>Step 1: 이미지 업로드</h2>
+        <div id="dropzone" class="dropzone">
+            이미지를 여기에 끌어다 놓거나 클릭하여 선택하세요
+        </div>
+        <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+        <div id="mobileOptions" style="display: none;">
+            <button id="selectFileButton">파일 선택</button>
+            <button id="captureButton">사진 촬영</button>
+        </div>
+        <div id="imagePreviewContainer"></div>
+        <button id="generateCaptions" style="display: none;">이미지 캡션 생성하기</button>
+    </div>
+
+    <div id="captionCarousel" class="carousel" style="display: none;"></div>
+
+    <div id="additionalImageUpload" style="display: none;">
+        <button id="addMoreImages">이미지 추가</button>
+    </div>
+
+    <div id="writeOptions" style="display: none;">
+        <select id="writingStyle">
+            <option value="">글쓰기 스타일을 선택하세요</option>
+        </select>
+        <select id="writingTone">
+            <option value="">글쓰기 톤을 선택하세요</option>
+        </select>
+        <div class="radio-group">
+            <p>창의성 수준(temperature):</p>
+            <label><input type="radio" name="creativity" value="2"> 보다 창의적인</label>
+            <label><input type="radio" name="creativity" value="5" checked> 보다 균형있는</label>
+            <label><input type="radio" name="creativity" value="9"> 보다 정밀한</label>
+        </div>
+        <select id="userGender">
+            <option value="">성별</option>
+            <option value="male">남성</option>
+            <option value="female">여성</option>
+        </select>
+        <select id="userAge">
+            <option value="">나이</option>
+        </select>
+        <input type="number" id="writingLength" min="100" max="5000" step="100" placeholder="글 길이 (100-5000자, 100자 단위로 입력하세요)">
+        <textarea id="context" placeholder="모든 이미지에 대한 추가 정보를 입력해주세요.(예: 인물의 이름, 특별한 상황, 이벤트 등)"></textarea>
+        <button id="generateContent">글 생성하기</button>
+    </div>
+
+    <div id="generatedContent" style="display: none;">
+        <div id="contentSkeleton" class="skeleton"></div>
+        <div id="content"></div>
+        <div id="hashtags"></div>
+        <button id="copyContent">클립보드에 복사</button>
+        <div id="shareOptions" style="display: none;">
+            <button id="shareNaverBlog">네이버 블로그에 공유</button>
+            <button id="shareInstagram">인스타그램에 공유</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
