@@ -1,0 +1,27 @@
+# requirements.txt
+# 이 파일은 프로젝트에 필요한 Python 패키지들을 나열합니다.
+# 설치 방법: pip install -r requirements.txt
+
+fastapi==0.68.0
+uvicorn==0.15.0
+python-multipart==0.0.5
+python-dotenv==0.19.0
+openai==0.27.0
+Pillow==8.3.1
+geopy==2.2.0
+
+
+'''
+# .env 파일
+# 이 파일은 중요한 설정 정보를 저장합니다. 절대로 버전 관리 시스템에 포함하지 마세요!
+
+# OpenAI API 키
+OPENAI_API_KEY=sk-proj-UjE7IU6u60b5eAdwaWRiT3BlbkFJ9PyY2kf37ulsYpI1o6gV
+
+# 서버 설정
+HOST=0.0.0.0
+PORT=8000
+
+# 기타 설정
+DEBUG=True
+'''
